@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "8bb4f184-d081-476e-9fe5-8cb8869379bb",
+		"name": "Chat_WhatsApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28711780"
+	},
+	"item": [
+		{
+			"name": "Plantilla_hello_word",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBALUvrAOUuty2ptuEI3MHDNa5gPZC4FzGpPZCW8ZBuSPqfifi4l1ZAclcHEKTYYmT1xrKzk9ZAASk15mf08eZBhPOFGb7fBI2Jknw4IZAZBfjM8dfGDcEsZCY70SiHGa0TxOhqv6MzO70VKQMGIAO9PDeNWNSPG0FYaZATAus40aTaLcFopVETIDHMDQYLapOabAgZDZD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"messaging_product\": \"whatsapp\", \"to\": \"593980453235\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mensaje personalizado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"preview_url\": false,\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"text\",\r\n    \"text\": {\r\n        \"body\": \"jajaj loquita infiel\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tipos de formato de texto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"preview_url\": false,\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"text\",\r\n    \"text\": {\r\n        \"body\": \"*jajaj babosa*    _jajaj babosa_    -jajaj babosa-    ´´jajaj babosa´´\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mensaje ubicacion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"preview_url\": false,\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"text\",\r\n    \"text\": {\r\n        \"body\": \"*jajaj babosa*    _jajaj babosa_    -jajaj babosa-    ´´jajaj babosa´´\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mensaje audio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"audio\",\r\n    \"audio\": {\r\n        \"link\": \"http://sonidosmp3gratis.com/sounds/bob-esponja-tonos.mp3\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mensaje docuementos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"preview_url\": false,\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"text\",\r\n    \"text\": {\r\n        \"body\": \"*jajaj babosa*    _jajaj babosa_    -jajaj babosa-    ´´jajaj babosa´´\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mensaje imagen",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAxSExZBx6HsBADKxqYUCJjfC4ydap3yZClYyEb8ApwTCJJmryFVPTpc4LAQMs3NZAhbrGGiIfz1Bz2YHQthragqrtv9ubJOrBWrCgqWrfw0OglLzf2fboHiMUAcn3QAZAuSr6jZBTUcCXaCwAKADrZCHlUlLEW7ILg4GihvkGeiy6xYWiJlrr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messaging_product\": \"whatsapp\",\r\n    \"preview_url\": false,\r\n    \"recipient_type\": \"individual\",\r\n    \"to\": \"593980453235\",\r\n    \"type\": \"text\",\r\n    \"text\": {\r\n        \"body\": \"*jajaj babosa*    _jajaj babosa_    -jajaj babosa-    ´´jajaj babosa´´\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v17.0/114575008376135/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v17.0",
+						"114575008376135",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
